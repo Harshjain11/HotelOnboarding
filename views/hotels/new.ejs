@@ -1,0 +1,26 @@
+<%-layout("layouts/boilerplate.ejs")%>
+<body>
+    <div class="col-6 offset-3 mt-3">
+        <h3 class="mt-3">Register your Hotel</h3>
+        <form action="/hotels" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="" class="form-label">Hotel Name:</label>
+                <input type="text" name="hotel[name]" class="form-control" required>
+                <div class="valid-feedback">Looks Good</div>
+            </div>
+            <div class="mb-3" >
+                <label for="" class="form-label">Address:</label>
+                <textarea name="hotel[address]" id="" class="form-control" required></textarea>
+                <div class="invalid-feedback"> Address is required</div>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Upload Logo</label>
+                <input type="file" name="hotel[logo]" required class="form-control">
+                <div class="invalid-feedback"> Please Upload a logo</div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-secondary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,43 @@
+<%- layout("layouts/boilerplate.ejs") %>
+<body>
+<%for(let i=0;i<hotels.length;i++) { %>
+    <% if(hotels[i].guestList.length) {%>
+    <div class=" mt-3 ">
+        <h4> &nbsp; &nbsp;<%=hotels[i].name%></h4>
+
+    </div>
+    <%}%>
+   
+    <%if(hotels[i].guestList.length) {%>
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Purpose</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <%let guests = hotels[i].guestList;%>
+                <%for(let j=0;j<guests.length;j++) {%>
+                    <tr>
+                        <td><%=guests[j].name%></td>
+                        <td><%=guests[j].number%></td>
+                        <td><%=guests[j].purpose%></td>
+                       
+                    </tr>
+                <%}%>
+                
+            </tbody>
+        </table>
+    <%}%>
+    <%}%>
+  
+
+   <div>
+    <button onclick="window.print()" class="btn btn btn-secondary print mb-3">Print</button>
+   </div>
+</body>
+
+

@@ -1,0 +1,33 @@
+<% layout("layouts/boilerplate.ejs")-%>
+<body>
+   
+    <div class="mt-3">
+        <h3>Book Your Hotel Now !</h3>
+    </div>
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>logo</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>QR code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0;i<hotels.length;i++) {  %>
+                <tr>
+                    <td><%=i+1%></td>
+                    <td><img src="<%=hotels[i].logo%>" class="hotel-logo" alt="logo"></td>
+                    <td><%=hotels[i].name%></td>
+                    <td><%= hotels[i].address%></td>
+                    <!-- <td class="qrCode"></td> -->
+                     <td class="qrCode"><a href="<%=hotelWithQrCodeUrl[i].url%>"><img src="<%=hotelWithQrCodeUrl[i].qrCodeUrl%>" alt=""></a></td>
+                </tr>
+                
+                <% } %>
+        </tbody>
+      </table>
+    
+</body>
+
