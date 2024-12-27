@@ -15,7 +15,9 @@ module.exports.showAllHotel = async(req, res) => {
     });
 
     const hotelWithQrCodeUrl = await Promise.all(hotelWithUrl.map(async (hotel) => {
-      let qrCodeUrl = await QRCode.toDataURL(hotel.url);
+      let url = `https://hotel-onboarding.vercel.app${hotel.url}`;
+      
+      let qrCodeUrl = await QRCode.toDataURL(url);
       return {...hotel,qrCodeUrl}
     }));
     // console.log(hotelWithUrl);
