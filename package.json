@@ -1,6 +1,6 @@
 {
-  "engines":{
-    "node":"v20.11.1"
+  "engines": {
+    "node": "v20.11.1"
   },
   "dependencies": {
     "cloudinary": "^1.21.0",
@@ -23,5 +23,15 @@
     "passport-local-mongoose": "^8.0.0",
     "qrcode": "^1.5.4",
     "router": "^1.3.8"
-  }
+  },
+  "name": "hotel-booking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Harsh Jain",
+  "license": "ISC",
+  "description": ""
 }
