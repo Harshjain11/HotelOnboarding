@@ -80,7 +80,7 @@ app.use((req, res, next) => {
   next();
 })
 app.get("/", (req, res) => {
-res.send("welcome to home page");
+res.redirect("/hotels");
 });
 
 app.use("/hotels",hotelRoutes);
